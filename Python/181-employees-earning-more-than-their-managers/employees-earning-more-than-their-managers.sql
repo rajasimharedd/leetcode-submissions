@@ -1,3 +1,3 @@
 # Write your MySQL query statement below
-select e1.name as employee from employee e1 where e1.salary > 
-( select e2.salary from employee e2 where e1.managerid = e2.id)
+select e1.name as employee from employee e1 left join employee e2 
+on e1.managerid = e2.id where e1.salary > e2.salary
